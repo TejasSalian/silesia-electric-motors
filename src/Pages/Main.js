@@ -17,13 +17,13 @@ const mainStyle = {
 
 const Main = () => {
     return <div style={mainStyle}>
-        <Router>
+        <Router basename="/">
             <Navbar />
             <Switch>
-                <Route exact path="/">
+                <Route path="/">
                     <Home />
                 </Route>
-                <Route exact path="/home">
+                <Route path="/home">
                     <Home />
                 </Route>
             </Switch>
