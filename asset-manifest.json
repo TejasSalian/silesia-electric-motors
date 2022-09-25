@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/silesia-electric-motors/static/css/main.ab295cde.css",
+    "main.js": "/silesia-electric-motors/static/js/main.1aee42b7.js",
+    "static/js/787.e5dabb61.chunk.js": "/silesia-electric-motors/static/js/787.e5dabb61.chunk.js",
+    "static/media/electricmotor2.png": "/silesia-electric-motors/static/media/electricmotor2.f4bdc9cf9c6e5d4639f1.png",
+    "static/media/home-banner.jpg": "/silesia-electric-motors/static/media/home-banner.1bbbfb7c9f9d448adac0.jpg",
+    "static/media/Poppins-Regular.ttf": "/silesia-electric-motors/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/silesia-electric-motors/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-Bold.ttf": "/silesia-electric-motors/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/am2.png": "/silesia-electric-motors/static/media/am2.f0480863d6841ae87e0a.png",
+    "static/media/am3.png": "/silesia-electric-motors/static/media/am3.b53867a286f2a4c59211.png",
+    "static/media/am1.jpg": "/silesia-electric-motors/static/media/am1.809d19f1b677a0706f03.jpg",
+    "static/media/logo.png": "/silesia-electric-motors/static/media/logo.1946b6d9dad53231cae5.png",
+    "index.html": "/silesia-electric-motors/index.html",
+    "main.ab295cde.css.map": "/silesia-electric-motors/static/css/main.ab295cde.css.map",
+    "main.1aee42b7.js.map": "/silesia-electric-motors/static/js/main.1aee42b7.js.map",
+    "787.e5dabb61.chunk.js.map": "/silesia-electric-motors/static/js/787.e5dabb61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab295cde.css",
+    "static/js/main.1aee42b7.js"
+  ]
+}
