@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CenterLayout from "../components/CenterLayout";
 import Logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import injectSheet from "react-jss";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 const styles = {
     navBarStyle: {
+        width: "100%",
         display: "block",
-        background: "#FFF",
-        boxShadow: "0 3px 12px 0 rgb(0 0 0 / 10%)",
+        background: "transparent",
+        position: "fixed",
+        zIndex: 9999,
+        transition: "background .3s",
+        "&.scrolled": {
+            background: "#FFF",
+            boxShadow: "0 3px 12px 0 rgb(0 0 0 / 33%)",
+        }
     },
     innerWrapper: {
         minHeight: 85,
@@ -17,6 +25,8 @@ const styles = {
         justifyContent: "space-between",
         "& img.logo": {
             width: 150,
+            background: "#FFF",
+            borderRadius: 25,
         }
     },
     navWrapper: {
@@ -24,29 +34,44 @@ const styles = {
         alignItems: "center",
         justifyContent: "flex-start",
         gap: 32,
+        "&.scrolled .navLink": {
+            color: "#333",
+        },
+        "& .navLink": {
+            textTransform: "capitalize",
+            position: "relative",
+            display: "block",
+            padding: "30px 0",
+            color: "#FFFFFF",
+            fontFamily: "Poppins-Medium",
+            textDecoration: "none",
+            fontSize: 18,
+            transition: "color .3s",
+        },
     },
-    navLink: {
-        textTransform: "capitalize",
-        position: "relative",
-        display: "block",
-        padding: "30px 0",
-        color: "#2e2d2d",
-        fontFamily: "Poppins-Medium",
-        textDecoration: "none",
-        fontSize: 18,
-    }
 }
 
 const Navbar = ({ classes }) => {
-    return <div className={classes.navBarStyle}>
+    const [scrolled, setScrolled] = useState(false);
+    const scrollPosition = useScrollPosition();
+
+    useEffect(() => {
+        if(scrollPosition > 100) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    }, [scrollPosition]);
+
+    return <div className={`${classes.navBarStyle} ${scrolled ? "scrolled" : ""}`}>
         <CenterLayout>
             <div className={classes.innerWrapper}>
                 <img src={Logo} alt="App Logo" className="logo" />
-                <div className={classes.navWrapper}>
-                    <Link to="/home" className={classes.navLink}>Home</Link>
-                    <Link to="/home" className={classes.navLink}>About Us</Link>
-                    <Link to="/home" className={classes.navLink}>Products</Link>
-                    <Link to="/home" className={classes.navLink}>Contact Us</Link>
+                <div className={`${classes.navWrapper} ${scrolled ? "scrolled" : ""}`}>
+                    <Link to="/home" className={"navLink"}>Home</Link>
+                    <Link to="/home" className={"navLink"}>About Us</Link>
+                    <Link to="/products" className={"navLink"}>Products</Link>
+                    <Link to="/home" className={"navLink"}>Contact Us</Link>
                 </div>
             </div>
         </CenterLayout>

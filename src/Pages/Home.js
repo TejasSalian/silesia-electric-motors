@@ -16,11 +16,8 @@ const styles = {
         backgroundSize: "cover",
         backgroundPosition: "0 -90px",
         backgroundRepeat: "no-repeat",
-        height: 500,
+        height: 650,
         position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         "&:after": {
             content: '""',
             background: "#ffffff",
@@ -34,13 +31,17 @@ const styles = {
     },
     bannerTextContainer: {
         position: "relative",
-        textAlign: "center",
+        textAlign: "left",
         background: "rgb(0 0 0 / 75%)",
         color: "#FFF !important",
-        padding: 20,
-        zIndex: 555,
-        width: 760,
+        padding: "20px 60px",
+        zIndex: 0,
+        height: "100%",
         borderRadius: 4,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
         "& h4": {
             fontWeight: 500,
             fontSize: 24,
@@ -82,7 +83,7 @@ const styles = {
                 borderRadius: 4,
             },
             "& .isoInfo": {
-                display: "block",
+                display: "none",
                 textAlign: "left",
                 padding: "10px 30px",
                 opacity: 1,
@@ -118,10 +119,9 @@ const styles = {
     motorSlider: {
         padding: "80px 0 80px 20px",
         display: "block",
+        position: "relative",
         "& .section-title": {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
+            display: "block",
             "& h1": {
                 fontSize: 32,
                 margin: 0,
@@ -134,18 +134,17 @@ const styles = {
                 margin: 0,
             },
             "& p": {
-                margin: 0,
+                marginTop: 10,
                 lineHeight: 1.4,
                 display: "block",
-                fontSize: 18,
-                textAlign: "right",
+                fontSize: 14,
             },
         }
     },
     imagesContainer: {
         display: "flex",
         alignItems: "center",
-        padding: "30px 0",
+        padding: "10px 0",
         gap: 25,
     },
     imageWrapper: {
@@ -174,8 +173,10 @@ const Home = ({ classes }) => {
     return <div className={classes.container}>
         <section className={classes.bannerImage}>
             <div className={classes.bannerTextContainer}>
-                <h4 className="text-white">Welcome to Silesia Electric Motors</h4>
-                <h1 className="text-white">Leading Electric Motor Manufacturer</h1>
+                <CenterLayout>
+                    <h4 className="text-white">Welcome to Silesia Electric Motors</h4>
+                    <h1 className="text-white">Leading Electric Motor Manufacturer</h1>
+                </CenterLayout>
             </div>
         </section>
 

@@ -5,31 +5,35 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "./Home";
+import Products from "./Products";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import injectSheet from "react-jss";
 
-const mainStyle = {
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
-    height: "100%",
+const styles = {
+    mainStyle: {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "100%",
+    },
 }
 
-const Main = () => {
-    return <div style={mainStyle}>
+const Main = ({ classes }) => {
+    return <div className={classes.mainStyle}>
         <Router basename="/">
             <Navbar />
-            <Switch>
-                <Route path="/">
-                    <Home />
-                </Route>
-                <Route path="/home">
-                    <Home />
-                </Route>
-            </Switch>
+                <Switch>
+                    <Route path="/home">
+                        <Home />
+                    </Route>
+                    <Route path="/products">
+                        <Products />
+                    </Route>
+                </Switch>
             <Footer />
         </Router>
     </div>
 }
 
-export default Main;
+export default injectSheet(styles)(Main);
