@@ -21,7 +21,7 @@ const styles = {
 
 const Main = ({ classes }) => {
     return <div className={classes.mainStyle}>
-        <Router basename="/">
+        <Router basename="/silesia-electric-motors">
             <Navbar />
                 <Switch>
                     <Route path="/home">
