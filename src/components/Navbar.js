@@ -26,8 +26,8 @@ const styles = {
         justifyContent: "space-between",
         "& img.logo": {
             width: 150,
-            background: "#FFF",
-            borderRadius: 25,
+            background: "#25d95c",
+            borderRadius: 4,
         }
     },
     navWrapper: {
