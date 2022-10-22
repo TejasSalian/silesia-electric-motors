@@ -165,7 +165,7 @@ const styles = {
         transition: "border-color .3s",
         position: "relative",
         "&:hover": {
-            borderColor: "#315ed7ee",
+            borderColor: "#045591",
             "& .linkIcon": {
                 opacity: 1,
             },
@@ -177,7 +177,7 @@ const styles = {
             width: "550px",
         },
         "& .linkIcon": {
-            color: "#6060f9",
+            color: "#1979c1",
             fontSize: 30,
             opacity: 0,
             position: "absolute",

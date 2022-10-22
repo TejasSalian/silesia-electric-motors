@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CenterLayout from "../components/CenterLayout";
 import Logo from "../assets/img/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import injectSheet from "react-jss";
 import useScrollPosition from "../hooks/useScrollPosition";
 import { PRODUCTS } from "../utils/products";
@@ -35,19 +35,25 @@ const styles = {
         alignItems: "center",
         justifyContent: "flex-start",
         gap: 32,
-        "&.scrolled .navLink": {
+        "&.scrolled a": {
+            color: "#8d939d",
+        },
+        "&.scrolled a.active": {
             color: "#333",
         },
-        "& .navLink": {
+        "& a": {
             textTransform: "capitalize",
             position: "relative",
             display: "block",
             padding: "30px 0",
-            color: "#FFFFFF",
+            color: "#b0b1c3",
             fontFamily: "Poppins-Medium",
             textDecoration: "none",
             fontSize: 18,
             transition: "color .3s",
+            "&.active": {
+                color: "#FFF",
+            },
         },
     },
 }
@@ -69,9 +75,9 @@ const Navbar = ({ classes }) => {
             <div className={classes.innerWrapper}>
                 <img src={Logo} alt="App Logo" className="logo" />
                 <div className={`${classes.navWrapper} ${scrolled ? "scrolled" : ""}`}>
-                    <Link to="/home" className={"navLink"}>Home</Link>
-                    <Link to={`/product/${PRODUCTS.sem_112_m_b3_4p.id}`} className={"navLink"}>Products</Link>
-                    <Link to="/home" className={"navLink"}>Contact Us</Link>
+                    <NavLink to="/home" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
+                    <NavLink to={`/product/${PRODUCTS.sem_112_m_b3_4p.id}`} className={({ isActive }) => (isActive ? "active" : "")}>Products</NavLink>
+                    {/* <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink> */}
                 </div>
             </div>
         </CenterLayout>
