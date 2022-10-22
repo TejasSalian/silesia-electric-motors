@@ -1,11 +1,15 @@
 import React from "react";
 import injectSheet from "react-jss";
+import { Link } from "react-router-dom";
 import HomeBannerImage from "../assets/img/home-banner.jpg";
 import CompanyIntroImage from "../assets/img/electricmotor2.png";
 import AlMotor1 from "../assets/img/am1.jpg";
-import AlMotor2 from "../assets/img/am2.png";
-import AlMotor3 from "../assets/img/am3.png";
+import AlMotor1Spec from "../assets/img/sem_112_m_b3_4p.PNG";
 import CenterLayout from "../components/CenterLayout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { PRODUCTS } from "../utils/products";
+
 
 const styles = {
     container: {
@@ -149,14 +153,36 @@ const styles = {
     },
     imageWrapper: {
         display: "flex",
-        flexDirection: "column",
-        boxShadow: "0px 4px 10px #00000024",
+        flexDirection: "row",
+        boxShadow: "-2px 2px 7px #00000024",
         background: "#FFF",
         borderRadius: 4,
         justifyContent: "center",
         alignItems: "center",
+        padding: "25px 25px 45px 25px ",
+        cursor: "pointer",
+        border: "1px solid transparent",
+        transition: "border-color .3s",
+        position: "relative",
+        "&:hover": {
+            borderColor: "#315ed7ee",
+            "& .linkIcon": {
+                opacity: 1,
+            },
+        },
         "& .image": {
-            width: "80%",
+            width: "320px",
+        },
+        "& .specImage": {
+            width: "550px",
+        },
+        "& .linkIcon": {
+            color: "#6060f9",
+            fontSize: 30,
+            opacity: 0,
+            position: "absolute",
+            right: 20,
+            transition: "opacity .3s",
         },
         "& .title": {
             padding: 20,
@@ -165,6 +191,9 @@ const styles = {
             borderRadius: "0 0 4px 4px",
             fontFamily: "Poppins-Medium",
             fontSize: 18,
+            position: "absolute",
+            bottom: 0,
+            color: "#333",
         },
     }
 }
@@ -175,7 +204,7 @@ const Home = ({ classes }) => {
             <div className={classes.bannerTextContainer}>
                 <CenterLayout>
                     <h4 className="text-white">Welcome to Silesia Electric Motors</h4>
-                    <h1 className="text-white">Leading Electric Motor Manufacturer</h1>
+                    <h1 className="text-white">Electric Motor Distrubutor</h1>
                 </CenterLayout>
             </div>
         </section>
@@ -198,28 +227,24 @@ const Home = ({ classes }) => {
                 <div className="section-title">
                     <div className="section-top">
                         <h1><b>Aluminum Electric Motors</b></h1>
-                        <h4>IE1, IE2, IE3 motors</h4>
+                        <h4>IE2 motor</h4>
                     </div>
                     <div className="section-bottom">
                         <div className="">
-                            <p>Motors power ranging 0.06Kw till 500Kw for both 50Hz and 60Hz<br />
-                                Speed ranges 700rpm, 900rpm,1400rpm and 2800 rpm.</p>
+                            <p>Three Phase Electric Motors- Aluminum Frame Motors - Power 4Kw for 50Hz<br />
+                                Speed 1445rpm</p>
                         </div>
                     </div>
                 </div>
                 <div className={classes.imagesContainer}>
-                    <div className={classes.imageWrapper}>
-                        <img className="image" src={AlMotor1} alt="Aluminium Motor 1" />
-                        <div className="title">Aluminium Motor 1</div>
-                    </div>
-                    <div className={classes.imageWrapper}>
-                        <img className="image" src={AlMotor2} alt="Aluminium Motor 2" />
-                        <div className="title" >Aluminium Motor 2</div>
-                    </div>
-                    <div className={classes.imageWrapper}>
-                        <img className="image" src={AlMotor3} alt="Aluminium Motor 3" />
-                        <div className="title" >Aluminium Motor 3</div>
-                    </div>
+                    <Link to={`/product/${PRODUCTS.sem_112_m_b3_4p.id}`}>
+                        <div className={classes.imageWrapper}>
+                            <img className="image" src={AlMotor1} alt="Aluminium Motor 1" />
+                            <img className="specImage" src={AlMotor1Spec} alt="Aluminium Motor 12 Spec" />
+                            <FontAwesomeIcon icon={faChevronRight} className={"linkIcon"} />
+                            <div className="title">Three Phase Electric Motors- Aluminum Frame - SEM 112 M_B3_4P</div>
+                        </div>
+                    </Link>
                 </div>
             </section>
         </CenterLayout>

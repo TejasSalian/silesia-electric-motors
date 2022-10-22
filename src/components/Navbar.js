@@ -4,6 +4,7 @@ import Logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import injectSheet from "react-jss";
 import useScrollPosition from "../hooks/useScrollPosition";
+import { PRODUCTS } from "../utils/products";
 
 const styles = {
     navBarStyle: {
@@ -56,7 +57,7 @@ const Navbar = ({ classes }) => {
     const scrollPosition = useScrollPosition();
 
     useEffect(() => {
-        if(scrollPosition > 100) {
+        if (scrollPosition > 100) {
             setScrolled(true);
         } else {
             setScrolled(false);
@@ -69,8 +70,7 @@ const Navbar = ({ classes }) => {
                 <img src={Logo} alt="App Logo" className="logo" />
                 <div className={`${classes.navWrapper} ${scrolled ? "scrolled" : ""}`}>
                     <Link to="/home" className={"navLink"}>Home</Link>
-                    <Link to="/home" className={"navLink"}>About Us</Link>
-                    <Link to="/products" className={"navLink"}>Products</Link>
+                    <Link to={`/product/${PRODUCTS.sem_112_m_b3_4p.id}`} className={"navLink"}>Products</Link>
                     <Link to="/home" className={"navLink"}>Contact Us</Link>
                 </div>
             </div>

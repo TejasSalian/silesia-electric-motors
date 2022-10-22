@@ -1,0 +1,35 @@
+export const PRODUCTS = {
+    sem_112_m_b3_4p: {
+        id: "sem_112_m_b3_4p",
+        type: "PM2A112M4 PTC",
+        "Frame Size": "112M",
+        capacity: "4kW",
+        speed: "1450RPM/4 Pole",
+        "Mounting Position": "B3",
+        "Insulation Class": "F",
+        "Protection Class": "IP55",
+        "Duty Cycle": "S1 Continuous",
+        "Temperature Rise Class": "B",
+        "Ambient Temp": "45 deg C",
+        "Cooling Method": "IC411 self-ventilated",
+        efficiency: "IE2 Efficiency (86.6%)",
+        "Power Factor Cos": "82% phi",
+        "I-starting / I-nominal": "7.7",
+        "T-starting / T-nominal": "2.3",
+        "T-max / Tn": "2.3",
+        "Full Load Torque": "26Nm",
+        "Thermal Protection": "PTC thermistor",
+        noise: "65db",
+        "Bearing DE": "SKF 6306 2RZ",
+        "Bearing NDE": "SKF 6306 2RZ",
+        weight: "37 kg",
+        electricalData: {
+            "Rated Power": "4 kW",
+            frequency: "50 Hz",
+            voltage: "400",
+            speed: "1445 RPM",
+            connection: "Delta and Star",
+            "Full Load Current": "8.1 A"
+        },
+    }
+}

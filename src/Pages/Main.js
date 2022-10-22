@@ -5,7 +5,7 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "./Home";
-import Products from "./Products";
+import Product from "./Product";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import injectSheet from "react-jss";
@@ -27,8 +27,8 @@ const Main = ({ classes }) => {
                     <Route path="/home">
                         <Home />
                     </Route>
-                    <Route path="/products">
-                        <Products />
+                    <Route path="/product/:id">
+                        <Product />
                     </Route>
                 </Switch>
             <Footer />
