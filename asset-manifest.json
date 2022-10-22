@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/silesia-electric-motors/static/css/main.ab295cde.css",
-    "main.js": "/silesia-electric-motors/static/js/main.21fdb058.js",
+    "main.js": "/silesia-electric-motors/static/js/main.d55bc1d4.js",
     "static/js/787.e5dabb61.chunk.js": "/silesia-electric-motors/static/js/787.e5dabb61.chunk.js",
     "static/media/electricmotor2.png": "/silesia-electric-motors/static/media/electricmotor2.7e67842b96bdac09509b.png",
     "static/media/Poppins-Regular.ttf": "/silesia-electric-motors/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
@@ -13,11 +13,11 @@
     "static/media/sem_112_m_b3_4p.PNG": "/silesia-electric-motors/static/media/sem_112_m_b3_4p.7520afbd3c786ffeb3e9.PNG",
     "index.html": "/silesia-electric-motors/index.html",
     "main.ab295cde.css.map": "/silesia-electric-motors/static/css/main.ab295cde.css.map",
-    "main.21fdb058.js.map": "/silesia-electric-motors/static/js/main.21fdb058.js.map",
+    "main.d55bc1d4.js.map": "/silesia-electric-motors/static/js/main.d55bc1d4.js.map",
     "787.e5dabb61.chunk.js.map": "/silesia-electric-motors/static/js/787.e5dabb61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab295cde.css",
-    "static/js/main.21fdb058.js"
+    "static/js/main.d55bc1d4.js"
   ]
 }
