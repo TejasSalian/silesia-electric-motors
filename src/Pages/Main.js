@@ -24,10 +24,13 @@ const Main = ({ classes }) => {
         <Router basename="/silesia-electric-motors">
             <Navbar />
                 <Switch>
-                    <Route path="/home">
+                    <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/product/:id">
+                    <Route exact path="/home">
+                        <Home />
+                    </Route>
+                    <Route exact path="/product/:id">
                         <Product />
                     </Route>
                 </Switch>
